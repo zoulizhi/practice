@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap1,
+    .wrap2,
+    .wrap3 {
+      height: 200px;
+      width: 200px;
+      position: relative;
+      border: 1px solid #eee;
+    }
+
+    .wrap1 div,
+    .wrap2 div,
+    .wrap3 div {
+      background: coral;
+    }
+
+    .wrap1 div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+
+    .wrap2 div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .wrap3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1.已知宽度，用定位加margin负数实现 -->
+  <div class="wrap1">
+    <div>有宽高块级</div>
+  </div>
+  <!-- 2.未知宽高，用定位加transform:translate()实现-->
+  <div class="wrap2">
+    <div>无宽高块级</div>
+  </div>
+  <!-- 3.用flex实现，justify-content:center;aling-items:center -->
+  <div class="wrap3">
+    <div>无宽高块级</div>
+  </div>
+</body>
+
+</html>
