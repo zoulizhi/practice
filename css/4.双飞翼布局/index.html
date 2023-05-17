@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container::after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+    .main,
+    .left,
+    .right {
+      float: left;
+    }
+
+    .main {
+      width: 100%;
+    }
+
+    .center {
+      background: cornflowerblue;
+      margin-left: 200px;
+      margin-right: 150px;
+    }
+
+    .left {
+      background: violet;
+      width: 200px;
+      margin-left: -100%;
+    }
+
+    .right {
+      background: rosybrown;
+      width: 150px;
+      margin-left: -150px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 添加浮动
+    center使用margin预留出左右两侧宽度
+    left设置margin-left:-100%,
+    right使用margin-left:-自身宽度 -->
+  <div class="container">
+    <div class="main">
+      <div class="center">center</div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+
+</body>
+
+</html>

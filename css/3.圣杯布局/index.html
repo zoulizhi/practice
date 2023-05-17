@@ -6,16 +6,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .header,
+    .footer {
+      height: 50px;
+      background: sandybrown;
+    }
+
+    .container {
+      padding-right: 150px;
+      padding-left: 200px;
+    }
+
+    .center,
+    .left,
+    .right {
+      float: left;
+    }
+
+    .center {
+      background: cornflowerblue;
+      width: 100%;
+    }
+
+    .left {
+      background: violet;
+      width: 200px;
+      margin-left: -100%;
+      position: relative;
+      left: -200px;
+    }
+
+    .right {
+      background: rosybrown;
+      width: 150px;
+      margin-right: -150px;
+    }
+
+    .container::after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="header"></div>
+  <!-- 添加浮动
+  container使用padding预留出左右两侧位置，
+  left使用margin-left：-100%，左移到content左侧顶边，加上相对于自身的定位，left：-自身宽度
+  right使用margin-right:-自身宽度。 -->
+  <div class="header">header</div>
   <div class="container">
-    <div class="center"></div>
-    <div class="left"></div>
-    <div class="right"></div>
+    <div class="center">center</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
   </div>
-  <div class="footer"></div>
+  <div class="footer">footer</div>
 </body>
 
 </html>
